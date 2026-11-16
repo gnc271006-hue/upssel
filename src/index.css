@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    color: #080f1e;
+    background-color: #080f1e;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+  }
+}
+
+/* Marca-texto clássico reto e uniforme em azul (#4B8FE8) para a headline principal */
+.marker-highlight-dark {
+  display: inline;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  padding: 0 0.16em;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 22%,
+    rgba(75, 143, 232, 0.72) 22%,
+    rgba(75, 143, 232, 0.72) 92%,
+    transparent 92%
+  );
+  background-repeat: no-repeat;
+}
+
+/* Centralização real e contenção responsiva do widget da Hotmart */
+#hotmart-sales-funnel {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#hotmart-sales-funnel > *,
+#hotmart-sales-funnel iframe {
+  box-sizing: border-box;
+  max-width: 100% !important;
+  margin-inline: auto !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
