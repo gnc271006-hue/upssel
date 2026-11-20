@@ -33,40 +33,27 @@ export function HeroSection() {
             className="space-y-4 text-center sm:space-y-5 lg:col-span-7"
           >
             <p className="text-xs font-semibold tracking-wide text-[#8EAFD2] sm:text-sm">
-              Plano de Prática Guiada · 4 Semanas
+              Plano de Prática Guiada — 4 Semanas
             </p>
 
             <h1
               id="hero-headline"
-              className="mx-auto max-w-[34ch] font-display text-[1.42rem] leading-[1.36] font-bold tracking-tight text-white sm:text-[1.88rem] sm:leading-[1.28] lg:max-w-none lg:text-[2.15rem] lg:leading-[1.24]"
+              className="mx-auto max-w-[26ch] font-display text-[1.45rem] leading-[1.34] font-bold tracking-tight text-white sm:max-w-[30ch] sm:text-[1.95rem] sm:leading-[1.28] lg:max-w-none lg:text-[2.28rem] lg:leading-[1.22]"
             >
-              <span className="marker-highlight-dark font-extrabold text-white">
-                Você já tem os exercícios.
-              </span>{' '}
-              <span className="marker-highlight-dark font-extrabold text-white">
-                E agora…
-              </span>{' '}
-              <span className="marker-highlight-dark font-extrabold text-white">
-                como saber quais fazer juntos
+              Você já tem os exercícios. Agora falta saber{' '}
+              <span className="hand-highlight font-extrabold text-white">
+                quais fazer juntos e em quais dias
               </span>
-              , como{' '}
-              <span className="marker-highlight-dark font-extrabold text-white">
-                organizá-los
-              </span>{' '}
-              e{' '}
-              <span className="marker-highlight-dark font-extrabold text-white">
-                acompanhá-los
-              </span>{' '}
-              ao longo das próximas{' '}
-              <span className="marker-highlight-dark font-extrabold text-white">
-                4 semanas
-              </span>{' '}
-              para buscar melhores resultados?
+              .
             </h1>
 
-            <p className="mx-auto max-w-xl text-base leading-relaxed text-[#8EAFD2] sm:text-lg">
-              Conheça um plano visual para organizar os exercícios e acompanhar
-              sua rotina semanal.
+            <p className="mx-auto max-w-xl text-base leading-relaxed text-[#A8C4E0] sm:text-lg">
+              Plano de{' '}
+              <span className="hand-highlight font-bold text-white">
+                30 dias dividido em 4 semanas
+              </span>
+              , com mapas mentais semanais e checklists para acompanhar cada
+              dia.
             </p>
 
             <div className="hidden justify-center border-t border-[#1D3557]/80 pt-5 text-xs font-medium text-[#8EAFD2] sm:flex sm:items-center sm:gap-4 sm:text-sm">

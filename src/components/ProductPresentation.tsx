@@ -25,7 +25,7 @@ export function ProductPresentation() {
             <p className="text-left text-base leading-relaxed text-[#1D3557] sm:text-lg">
               O Plano de Prática Guiada reúne materiais complementares para
               ajudar você a organizar e acompanhar sua rotina de exercícios ao
-              longo de quatro semanas.
+              longo do plano de 30 dias dividido em 4 semanas.
             </p>
           </div>
         </motion.div>

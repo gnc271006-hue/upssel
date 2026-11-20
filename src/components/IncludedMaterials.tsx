@@ -20,13 +20,10 @@ const FEATURED_MATERIAL: MaterialItem = {
   number: '01',
   title: 'Plano de Prática em PDF',
   description:
-    'Um plano organizado para 30 dias, com uma estrutura diária que ajuda você a saber quais exercícios realizar, como distribuir sua prática e quanto tempo reservar para cada sessão. Consulte a programação de cada dia e acompanhe a sequência proposta ao longo das semanas, sem precisar decidir tudo por conta própria.',
+    'Um plano organizado para 30 dias dividido em 4 semanas, com uma estrutura diária que ajuda você a saber quais exercícios realizar, como distribuir sua prática e quanto tempo reservar para cada sessão. Consulte a programação de cada dia e acompanhe a sequência proposta ao longo das semanas, sem precisar decidir tudo por conta própria.',
   highlights: [
-    'Plano de 30 dias',
+    'Plano de 30 dias dividido em 4 semanas',
     'Exercícios organizados por dia',
-    'Orientação sobre a prática',
-    'Tempo dedicado à rotina',
-    'Estrutura diária de acompanhamento',
   ],
   icon: FileText,
 };
@@ -40,8 +37,6 @@ const SECONDARY_MATERIALS: MaterialItem[] = [
     highlights: [
       'Um mapa mental para cada semana',
       'Consulta visual',
-      'Organização por etapa',
-      'Facilidade de acompanhamento',
     ],
     icon: Network,
   },
@@ -49,12 +44,10 @@ const SECONDARY_MATERIALS: MaterialItem[] = [
     number: '03',
     title: 'Checklist de Acompanhamento',
     description:
-      'Uma ferramenta prática para registrar sua rotina, marcar os dias em que realizou os exercícios e acompanhar sua própria consistência ao longo do plano de 30 dias.',
+      'Uma ferramenta prática para registrar sua rotina, marcar os dias em que realizou os exercícios e acompanhar sua própria consistência ao longo do plano de 30 dias dividido em 4 semanas.',
     highlights: [
       'Registro da prática',
       'Marcação diária',
-      'Acompanhamento da rotina',
-      'Organização pessoal',
     ],
     icon: ClipboardCheck,
   },
@@ -66,8 +59,6 @@ const SECONDARY_MATERIALS: MaterialItem[] = [
     highlights: [
       'Organização da rotina noturna',
       'Consulta simples',
-      'Lista prática',
-      'Apoio à organização pessoal',
     ],
     icon: Moon,
   },
@@ -111,9 +102,9 @@ export function IncludedMaterials() {
             </span>
           </h2>
 
-          <p className="mx-auto mt-3.5 max-w-xl text-sm leading-relaxed text-[#315B88] sm:text-base">
+          <p className="mx-auto mt-3.5 max-w-xl text-sm leading-relaxed text-[#1D3557] sm:text-base">
             Materiais visuais e práticos para ajudar você a organizar e
-            acompanhar sua rotina durante 4 semanas.
+            acompanhar sua rotina no plano de 30 dias dividido em 4 semanas.
           </p>
         </div>
 
@@ -132,7 +123,7 @@ export function IncludedMaterials() {
                   <FeaturedIcon className="h-5 w-5" aria-hidden="true" />
                 </div>
                 <div>
-                  <span className="font-display text-xs font-bold tracking-wide text-[#8EAFD2] tabular-nums">
+                  <span className="font-display text-xs font-bold tracking-wide text-[#CFE3F8] tabular-nums">
                     {FEATURED_MATERIAL.number} · Estrutura central do plano
                   </span>
                   <h3 className="font-display text-xl font-bold tracking-tight text-white sm:text-2xl">
@@ -141,13 +132,13 @@ export function IncludedMaterials() {
                 </div>
               </div>
 
-              <p className="text-[15px] leading-relaxed text-[#CFE2F7] sm:text-base">
+              <p className="text-[15px] leading-relaxed text-[#D8E9FA] sm:text-base">
                 {FEATURED_MATERIAL.description}
               </p>
             </div>
 
             <div className="rounded-2xl border border-[#4B8FE8]/30 bg-[#132642] p-4 sm:p-5 lg:col-span-5">
-              <p className="mb-3 font-display text-xs font-bold tracking-wide text-[#8EAFD2]">
+              <p className="mb-3 font-display text-xs font-bold tracking-wide text-[#CFE3F8]">
                 Como este guia organiza sua prática:
               </p>
               <ul className="space-y-2.5">
@@ -189,7 +180,7 @@ export function IncludedMaterials() {
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#4B8FE8]/35 bg-[#26456F] text-[#EAF1F9]">
                       <Icon className="h-5 w-5" aria-hidden="true" />
                     </div>
-                    <span className="font-display text-xs font-bold text-[#8EAFD2] tabular-nums">
+                    <span className="font-display text-xs font-bold text-[#CFE3F8] tabular-nums">
                       {item.number}
                     </span>
                   </div>
@@ -198,7 +189,7 @@ export function IncludedMaterials() {
                     {item.title}
                   </h3>
 
-                  <p className="mt-2 text-sm leading-relaxed text-[#CFE2F7]">
+                  <p className="mt-2 text-sm leading-relaxed text-[#D8E9FA]">
                     {item.description}
                   </p>
                 </div>
@@ -207,11 +198,11 @@ export function IncludedMaterials() {
                   {item.highlights.map((highlight) => (
                     <li
                       key={highlight}
-                      className="flex items-center gap-2 text-xs font-medium text-[#B8D2EE] sm:text-[13px]"
+                      className="flex items-center gap-2 text-xs font-medium text-[#D8E9FA] sm:text-[13px]"
                     >
                       <span
                         aria-hidden="true"
-                        className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#4B8FE8]"
+                        className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#6EA8F2]"
                       />
                       <span>{highlight}</span>
                     </li>

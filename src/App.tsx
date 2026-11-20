@@ -1,9 +1,10 @@
 import { MotionConfig } from 'motion/react';
 import { PurchaseConfirmation } from './components/PurchaseConfirmation';
 import { HeroSection } from './components/HeroSection';
+import { UpsellOfferSection } from './components/UpsellOfferSection';
+import { PlanComparisonSection } from './components/PlanComparisonSection';
 import { ProductPresentation } from './components/ProductPresentation';
 import { IncludedMaterials } from './components/IncludedMaterials';
-import { UpsellOfferSection } from './components/UpsellOfferSection';
 import { FaqAccordion } from './components/FaqAccordion';
 import { DisclaimerFooter } from './components/DisclaimerFooter';
 
@@ -15,9 +16,10 @@ export default function App() {
 
         <main>
           <HeroSection />
+          <UpsellOfferSection />
+          <PlanComparisonSection />
           <ProductPresentation />
           <IncludedMaterials />
-          <UpsellOfferSection />
           <FaqAccordion />
         </main>
 

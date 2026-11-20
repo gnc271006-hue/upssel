@@ -21,39 +21,18 @@
   }
 }
 
-/* Marca-texto clássico reto e uniforme em azul (#4B8FE8) para a headline principal */
-.marker-highlight-dark {
+/* Grifo manual desenhado à mão com preenchimento sólido (#2563EB) e borda de volume (#3B82F6) */
+.hand-highlight {
   display: inline;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
-  padding: 0 0.16em;
-  background-image: linear-gradient(
-    to bottom,
-    transparent 22%,
-    rgba(75, 143, 232, 0.72) 22%,
-    rgba(75, 143, 232, 0.72) 92%,
-    transparent 92%
-  );
+  padding: 0.12em 0.42em;
+  margin: 0 -0.06em;
+  color: #ffffff;
   background-repeat: no-repeat;
-}
-
-/* Centralização real e contenção responsiva do widget da Hotmart */
-#hotmart-sales-funnel {
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 100%;
-  margin-inline: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-#hotmart-sales-funnel > *,
-#hotmart-sales-funnel iframe {
-  box-sizing: border-box;
-  max-width: 100% !important;
-  margin-inline: auto !important;
+  background-size: 100% 100%;
+  background-position: center;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 40' preserveAspectRatio='none'%3E%3Cpath d='M1,21 C11,6 32,2 68,4 C112,7 162,2 204,5 C223,6 234,11 239,19 C228,33 198,38 156,36 C108,34 62,39 26,35 C12,33 5,28 1,21 Z' fill='%233B82F6'/%3E%3Cpath d='M4,20 C13,9 34,5 68,7 C112,10 162,5 202,8 C220,9 230,13 235,19 C225,30 196,35 156,33 C108,31 62,36 28,32 C15,30 8,26 4,20 Z' fill='%232563EB'/%3E%3C/svg%3E");
 }
 
 @media (prefers-reduced-motion: reduce) {

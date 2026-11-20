@@ -1,5 +1,13 @@
 import { useEffect } from 'react';
 import { motion } from 'motion/react';
+import { Check } from 'lucide-react';
+
+const OFFER_CHECKLIST_ITEMS = [
+  'Plano de Prática em PDF',
+  '4 Mapas Mentais Semanais',
+  'Checklist de Acompanhamento',
+  'Checklist da Rotina Antes de Dormir',
+];
 
 const HOTMART_SCRIPT_SRC =
   'https://checkout.hotmart.com/lib/hotmart-checkout-elements.js';
@@ -84,7 +92,7 @@ export function UpsellOfferSection() {
       aria-labelledby="upsell-offer-heading"
       className="bg-[#101D35] py-12 sm:py-16 lg:py-20"
     >
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-5xl px-[6px] min-[481px]:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -103,7 +111,7 @@ export function UpsellOfferSection() {
           />
 
           {/* Cartão principal de oferta Black Friday */}
-          <div className="relative z-10 overflow-hidden rounded-3xl border border-[#315B88]/50 bg-[#080F1E] shadow-[0_30px_70px_-18px_rgba(0,0,0,0.65)]">
+          <div className="relative z-10 rounded-3xl border border-[#315B88]/50 bg-[#080F1E] shadow-[0_30px_70px_-18px_rgba(0,0,0,0.65)]">
             {/* Brilho sutil azul-noite interno */}
             <div
               aria-hidden="true"
@@ -113,7 +121,7 @@ export function UpsellOfferSection() {
             {/* FITA BLACK FRIDAY DIAGONAL EM CAMADAS (CSS puro, contida no cartão) */}
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute inset-0 overflow-hidden"
+              className="pointer-events-none absolute inset-0 overflow-hidden rounded-3xl"
             >
               {/* Camada inferior cruzada para dar sensação de fita física amarrada */}
               <div className="absolute top-[22px] -right-[104px] flex h-[28px] w-[320px] rotate-[24deg] items-center justify-center border-y border-white/15 bg-gradient-to-b from-[#171717] via-[#040404] to-[#121212] opacity-90 shadow-[0_6px_14px_rgba(0,0,0,0.7)] sm:top-[30px] sm:-right-[94px] sm:h-[32px] sm:w-[400px]">
@@ -134,7 +142,7 @@ export function UpsellOfferSection() {
             </div>
 
             {/* Conteúdo do cartão com espaçamento protegido para a fita não cobrir textos */}
-            <div className="relative px-4 pt-20 pb-8 sm:px-8 sm:pt-16 sm:pb-12 lg:px-12 lg:py-14">
+            <div className="relative px-2 pt-20 pb-8 min-[481px]:px-8 min-[481px]:pt-16 min-[481px]:pb-12 lg:px-12 lg:py-14">
               <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-10">
                 {/* Coluna esquerda: título promocional centralizado e texto de apoio legível */}
                 <div className="min-w-0 space-y-4 lg:col-span-6">
@@ -154,15 +162,29 @@ export function UpsellOfferSection() {
                   <p className="mx-auto max-w-xl text-left text-[15px] leading-relaxed text-[#EAF1F9]/85 sm:text-base">
                     Adicione o Plano de Prática Guiada à sua compra e tenha
                     acesso aos materiais complementares para organizar sua
-                    prática ao longo das próximas quatro semanas.
+                    prática ao longo do plano de 30 dias dividido em 4 semanas.
                   </p>
                 </div>
 
-                {/* Coluna direita: bloco de preços (vermelho riscado + verde destaque) + slot Hotmart */}
+                {/* Coluna direita: lista curta, bloco de preços (vermelho claro riscado + verde destaque), garantia + slot Hotmart */}
                 <div className="min-w-0 lg:col-span-6 lg:pt-16">
-                  <div className="mx-auto box-border w-full max-w-md overflow-hidden rounded-2xl border border-[#315B88]/45 bg-[#101D35]/90 px-4 py-6 text-center shadow-inner sm:px-6 sm:py-7">
+                  <div className="mx-auto box-border w-full min-w-0 rounded-2xl border border-[#315B88]/45 bg-[#101D35]/90 px-3 py-6 text-center shadow-inner min-[481px]:max-w-md min-[481px]:px-6 min-[481px]:py-7">
+                    <ul className="mb-5 space-y-2 border-b border-[#315B88]/40 pb-5 text-left">
+                      {OFFER_CHECKLIST_ITEMS.map((item) => (
+                        <li
+                          key={item}
+                          className="flex items-center gap-2 text-[13px] leading-snug font-medium text-[#EAF1F9] sm:text-sm"
+                        >
+                          <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#26456F] text-[#8CC0F7]">
+                            <Check className="h-3 w-3" aria-hidden="true" />
+                          </span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+
                     <div className="space-y-1">
-                      <p className="font-display text-lg font-bold text-[#EF4444] line-through decoration-[#EF4444] decoration-2 tabular-nums sm:text-xl">
+                      <p className="font-display text-lg font-bold text-[#FF6B6B] line-through decoration-[#FF6B6B] decoration-2 tabular-nums sm:text-xl">
                         R$ 95,00
                       </p>
 
@@ -171,13 +193,17 @@ export function UpsellOfferSection() {
                       </p>
                     </div>
 
-                    <p className="mt-3 text-xs leading-relaxed text-[#8EAFD2] sm:text-[13px]">
+                    <p className="mt-3 text-xs leading-relaxed text-[#CFE2F7] sm:text-[13px]">
                       Plano de Prática Guiada — 4 Semanas (acesso digital
                       complementar)
                     </p>
 
+                    <p className="mt-2 text-xs font-semibold text-[#EAF1F9] sm:text-[13px]">
+                      Compra com 7 dias de garantia
+                    </p>
+
                     {/* HOTMART - Sales Funnel Widget */}
-                    <div className="mx-auto mt-6 box-border w-full max-w-full border-t border-[#315B88]/40 pt-5">
+                    <div className="mt-6 -mx-[17px] box-border block w-[calc(100%+34px)] min-w-0 rounded-2xl border border-[#D4E2F1] bg-white px-2 pt-4 pb-4 text-center min-[481px]:mx-0 min-[481px]:w-full min-[481px]:p-4">
                       <div id="hotmart-sales-funnel" />
                     </div>
                   </div>
